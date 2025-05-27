@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="<%= BASE_URL %>favicon.ico">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <script>
+      // 帮助调试导航问题的工具
+      window.navigateToDetection = function() {
+        const router = window._vueApp?.$router;
+        if (router) {
+          router.push('/detection');
+          console.log('已尝试导航到 /detection 路径');
+          return '导航请求已发送';
+        }
+        return '无法找到路由器实例';
+      }
+    </script>
+  </head>
+  <body>
+    <noscript>
+      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+    <!-- 应急导航链接，仅用于开发调试 -->
+    <div id="emergency-links" style="position: fixed; bottom: 10px; left: 10px; background: rgba(0,0,0,0.7); padding: 10px; border-radius: 5px; z-index: 9999;">
+      <a href="/#/" style="color: white; margin-right: 10px;">首页</a>
+      <a href="/#/tasks" style="color: white; margin-right: 10px;">任务</a>
+      <a href="/#/detection" style="color: white;">检测</a>
+    </div>
+  </body>
+</html>

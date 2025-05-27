@@ -1,0 +1,131 @@
+@import './variables.css';
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--darker-bg);
+  color: var(--text-primary);
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+}
+
+/* 通用卡片样式 */
+.card {
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius-large);
+  box-shadow: var(--shadow-base);
+  padding: var(--spacing-lg);
+  margin-bottom: var(--spacing-lg);
+}
+
+/* 标题样式 */
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  font-weight: 500;
+}
+
+/* 按钮基础样式 */
+.btn {
+  border: none;
+  border-radius: var(--border-radius-base);
+  padding: 8px 16px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 14px;
+  transition: all 0.3s;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-light);
+}
+
+.btn-success {
+  background-color: var(--success-color);
+  color: white;
+}
+
+.btn-danger {
+  background-color: var(--danger-color);
+  color: white;
+}
+
+.btn-warning {
+  background-color: var(--warning-color);
+  color: #000;
+}
+
+/* 输入框样式 */
+.input {
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-base);
+  padding: 8px 12px;
+  color: var(--text-primary);
+  width: 100%;
+}
+
+.input:focus {
+  border-color: var(--primary-color);
+  outline: none;
+}
+
+/* 响应式容器 */
+.container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+/* 图标通用样式 */
+.icon {
+  font-size: 16px;
+  margin-right: 6px;
+}
+
+/* 加载动画 */
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.spinner {
+  border: 3px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  border-top-color: var(--primary-color);
+  width: 24px;
+  height: 24px;
+  animation: spin 1s linear infinite;
+  display: inline-block;
+}
+
+/* 标签样式 */
+.tag {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.tag-success {
+  background-color: rgba(82, 196, 26, 0.2);
+  color: var(--success-color);
+  border: 1px solid rgba(82, 196, 26, 0.4);
+}
+
+.tag-warning {
+  background-color: rgba(250, 173, 20, 0.2);
+  color: var(--warning-color);
+  border: 1px solid rgba(250, 173, 20, 0.4);
+}
+
+.tag-danger {
+  background-color: rgba(245, 34, 45, 0.2);
+  color: var(--danger-color);
+  border: 1px solid rgba(245, 34, 45, 0.4);
+}
